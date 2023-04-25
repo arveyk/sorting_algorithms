@@ -23,16 +23,16 @@ void insertion_sort_list(listint_t **list)
 		{ 
 			temp->prev->next = temp->next->next;
 		
-			temp->next->prev = temp->prev;
 			temp->prev = temp->next;
 			
 			temp->next = temp->next->next;
+			temp->next->prev = temp->prev;
 			temp->next->next = temp;
 			print_list(*list);
-			
 		}
 
 		temp = temp->next;
+		break;	
 
 	}
 	
