@@ -17,6 +17,6 @@ int main(void)
 	printf("\n");
 	quick_sort_hoare(array, n);
 	printf("\n");
-	printf_array(array, n);
+	print_array(array, n);
 	return (0);
 }
