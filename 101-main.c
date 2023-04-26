@@ -20,7 +20,7 @@ listint_t *create_listint(const int *array, size_t size)
 	list = NULL;
 	while (size--)
 	{
-	
+
 		node = malloc(sizeof(*node));
 		if (!node)
 			return (NULL);

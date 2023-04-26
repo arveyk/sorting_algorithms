@@ -18,7 +18,7 @@ void quick_sort_hoare(int *array, size_t size)
 
 	while (g < size - 1)
 	{
-	
+
 		if (array[0] > array[1])
 		{
 			temp = array[0];
@@ -47,7 +47,7 @@ void quick_sort_hoare(int *array, size_t size)
 			}
 			c++;
 		}
-		
+
 		g++;
 	}
 }
