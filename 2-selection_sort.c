@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stddef.h>
 
+/**
+ * swap - interchanges the position of two numbers
+ * @a: pointer to first number
+ * @b: pointer to second number
+ *
+ * Return: No return value
+ */
 void swap(int *a, int *b)
 {
 	int temp;
@@ -22,51 +29,31 @@ void selection_sort(int *array, size_t size)
 {
 	size_t p = 0;
 	size_t q = 1;
-	size_t s = 0;
-	size_t r;
+	size_t psn_a;
+	size_t psn_save;
+	int smallest;
 
-	while(q < size)
+	while (q < size)
 	{
-	
-		if (array[p] > array[q])
+		smallest = array[p];
+		for (psn_a = q; psn_a < size; psn_a++)
 		{
-			swap(&(array[p]), &(array[q]));
-			print_array(array, size);
-			s = q + 1;
-			while (s < size)
+			if (array[p] > array[psn_a])
 			{
-				if (array[p] > array[s])
+				if (smallest > array[psn_a])
 				{
-					swap(&(array[p]), &(array[s])); 
-					print_array(array, size);
+					smallest = array[psn_a];
+					psn_save = psn_a;
 				}
-				s++;
 			}
 		}
-		else
+		if (array[p] > array[psn_save])
 		{
-			r = q + 1;
-			while (r < size)
-			{
-				if (array[p] > array[r])
-				{
-					swap(&(array[p]), &(array[r]));
-					print_array(array, size);
-					s = r + 1;
-					while (s < size)
-					{
-						if (array[p] > array[s])
-						{
-							swap(&(array[p]), &(array[s]));
-							print_array(array, size);
-						}
-						s++;
-					}
-				}
-				r++;
-			}
+			swap(&(array[p]), &(array[psn_save]));
+			print_array(array, size);
+		}
 		p++;
 		q++;
-		}
 	}
 }
+
