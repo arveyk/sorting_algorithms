@@ -19,7 +19,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *trav1 = NULL;
 	listint_t *prev_node;
 	listint_t *nxt = NULL;
- 	listint_t *p = NULL;
+	listint_t *p = NULL;
 	listint_t *p2 = NULL;
 	listint_t *prev_node2 = NULL;
 	listint_t *nxt2 = NULL;
@@ -60,7 +60,7 @@ void insertion_sort_list(listint_t **list)
 
 					if (prev_node2)
 						prev_node2->next = p2;
-					
+
 					nxt2->prev = p;
 
 					p->prev = p2;
@@ -68,9 +68,9 @@ void insertion_sort_list(listint_t **list)
 
 					p2->prev = prev_node2;
 					p2->next = p;
-					
+
 					print_list(*list);
-					
+
 					p = p2->prev;
 
 				}
