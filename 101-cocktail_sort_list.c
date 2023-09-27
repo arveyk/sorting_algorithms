@@ -12,7 +12,7 @@ void print_list(const listint_t *list);
  * Return: No value
  */
 
-void insertion_sort_list(listint_t **list)
+void cocktail_sort_list(listint_t **list)
 {
 
 	listint_t *trav0 = *(list);
