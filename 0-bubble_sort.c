@@ -17,21 +17,20 @@ void bubble_sort(int *array, size_t size)
 	char flip = 'a';
 
 
-	while (array && limiter < size)
+	while (array && limiter < size - 1)
 	{
 
-		for (m = 0; m < size; m++)
+		for (m = 0; m < size - 1; m++)
 			if (array[m] > array[m + 1])
-		{
-
-			temp = array[m];
-			array[m] = array[m + 1];
-			array[m + 1]  = temp;
-			print_array(array, size);
-			flip = 'b';
-		}
-		limiter++;
+			{
+				temp = array[m];
+				array[m] = array[m + 1];
+				array[m + 1]  = temp;
+				print_array(array, size);
+				flip = 'b';
+			}
 		if (flip == 'a')
 			break;
+		limiter++;
 	}
 }

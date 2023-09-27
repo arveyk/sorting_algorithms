@@ -38,4 +38,5 @@ typedef struct deck_node_s
 	struct deck_node_s *next;
 } deck_node_t;
 
+void sort_deck(deck_node_t **deck);
 #endif
